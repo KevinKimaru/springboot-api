@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: io.springfox:springfox-data-rest:2.7.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.springfox/springfox-data-rest/2.7.0/c65f2299d064e63e75e0e2c1da137c82ac2a1c11/springfox-data-rest-2.7.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.springfox/springfox-data-rest/2.7.0/549b37daa914b911c68826d4b325f4915bf3efa5/springfox-data-rest-2.7.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
