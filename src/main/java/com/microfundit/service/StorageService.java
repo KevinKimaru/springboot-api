@@ -22,10 +22,12 @@ public class StorageService {
     Logger log = LoggerFactory.getLogger(this.getClass().getName());
     private final Path rootLocation = Paths.get("files");
 
-    public void store(MultipartFile file, Long dir) {
+    public String store(MultipartFile file, Long dir) {
         try {
             Path location = Files.createDirectories(Paths.get("files", dir.toString()));
-            Files.copy(file.getInputStream(), location.resolve(file.getOriginalFilename()));
+            String fileName = String.valueOf(System.currentTimeMillis());
+            Files.copy(file.getInputStream(), location.resolve(fileName));
+            return fileName;
         } catch (Exception e) {
             throw new RuntimeException("FAIL!");
         }

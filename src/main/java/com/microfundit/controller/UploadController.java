@@ -43,12 +43,12 @@ public class UploadController {
         String message = "";
         try {
             Story story = stories.findOne(storyId);
-            storageService.store(file, story.getId());
+            String imageName = storageService.store(file, story.getId());
 //            files.add(file.getOriginalFilename());
 
-            message = "You successfully uploaded " + file.getOriginalFilename() + "!";
+            message = "You successfully uploaded " + file.getOriginalFilename() + "! as" + imageName;
 
-            story.getImages().add(file.getOriginalFilename());
+            story.getImages().add(imageName);
             stories.save(story);
 
             return ResponseEntity.status(HttpStatus.OK).body(message);

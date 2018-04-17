@@ -15,7 +15,7 @@ import java.util.List;
  */
 public interface DonationRepository extends CrudRepository<Donation, Long> {
 
-    @PreAuthorize("hasRole('ROLE_USER')")
+//    @PreAuthorize("hasRole('ROLE_USER')")
     @Query("select d from Donation d where d.donor.username = :#{principal}")
     List<Donation> findByDonor();
 
